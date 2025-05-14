@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="app">
+      <header>
+        <div class="logo-container">
+          <h1>Task Manager</h1>
+        </div>
+        <div class="theme-toggle" id="themeToggle">
+          <span class="material-icons">dark_mode</span>
+        </div>
+      </header>
+      
+      <main>
+        <div class="task-input-container">
+          <input type="text" id="taskInput" placeholder="Add a new task..." maxlength="100">
+          <button id="addTaskBtn">Add Task</button>
+        </div>
+
+        <div class="tasks-container">
+          <div class="tasks-header">
+            <h2>My Tasks</h2>
+            <div class="task-filters">
+              <button class="filter-btn active" data-filter="all">All</button>
+              <button class="filter-btn" data-filter="active">Active</button>
+              <button class="filter-btn" data-filter="completed">Completed</button>
+            </div>
+          </div>
+
+          <ul id="taskList" class="task-list"></ul>
+
+          <div class="tasks-footer">
+            <span id="taskCount">0 tasks remaining</span>
+            <button id="clearCompletedBtn">Clear completed</button>
+          </div>
+        </div>
+      </main>
+
+      <footer>
+        <p>Double-click to edit a task</p>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
